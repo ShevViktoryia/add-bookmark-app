@@ -3,6 +3,7 @@
     <bookmark-item
     v-for="item in bookmarks"
     :key="item.id"
+    :id="item.id"
     :title="item.title"
     :description="item.description"
     :link="item.link"

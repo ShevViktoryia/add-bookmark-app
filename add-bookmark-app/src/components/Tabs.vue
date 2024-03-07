@@ -32,7 +32,8 @@ export default {
   provide() {
     return {
       bookmarks: this.bookmarksList,
-      addBookmark: this.addBookmark
+      addBookmark: this.addBookmark,
+      deleteBookmark: this.deleteBookmark
     }
   },
   computed: {
@@ -56,6 +57,10 @@ export default {
       };
       this.bookmarksList.push(newBookmark);
       this.selectedTab = 'bookmarks';
+    },
+    deleteBookmark(bookmarkId) {
+      const index = this.bookmarksList.findIndex(bookmark => bookmark.id === bookmarkId);
+      this.bookmarksList.splice(index, 1);
     }
   }
 }

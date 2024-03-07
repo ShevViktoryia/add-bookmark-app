@@ -3,7 +3,7 @@
     <form @submit.prevent="submitForm">
       <div class="form-fields">
         <label for="title">Title</label>
-        <input id="title" name="title" type="text" ref="titleField">
+        <input id="title" name="title" type="text" ref="titleField" required>
       </div>
       <div class="form-fields">
         <label for="description">Description</label>
@@ -11,7 +11,7 @@
       </div>
       <div class="form-fields">
         <label for="link">Link</label>
-        <input id="link" name="link" type="url" ref="linkField">
+        <input id="link" name="link" type="url" ref="linkField" required>
       </div>
       <button type="submit" class="form-btn">Add bookmark</button>
     </form>
